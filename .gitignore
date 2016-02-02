@@ -4,5 +4,8 @@
 /project/project/
 /project/target/
 /target/
+bin/
 .classpath
 .project
+.cache-main
+.settings/
