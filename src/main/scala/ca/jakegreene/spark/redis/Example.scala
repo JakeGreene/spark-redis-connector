@@ -19,7 +19,7 @@ object Example {
     val updatedParents = parentByKey
       .join(childByParentId)
       .mapValues {
-        case (parent, child) => rollup(parent, child.toList)
+        case (parent, children) => rollup(parent, children.toList)
       }
     updatedParents.saveToRedis()
   }
