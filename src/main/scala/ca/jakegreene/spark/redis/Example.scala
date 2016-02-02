@@ -18,8 +18,8 @@ object Example {
     val parentByKey = sc.redisHashes("Parent:*")
     val updatedParents = parentByKey
       .join(childByParentId)
-      .map {
-        case (parentKey, (parent, child)) => (parentKey, rollup(parent, child.toList))
+      .mapValues {
+        case (parent, child) => rollup(parent, child.toList)
       }
     updatedParents.saveToRedis()
   }
