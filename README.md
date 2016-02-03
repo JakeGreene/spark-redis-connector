@@ -15,7 +15,7 @@ val sc = new SparkContext(config)
  *  Can read all Redis Hash's matching a pattern into an RDD. Includes the
  *  key as the first element of the tuple to allow for PairRDDFunctions
  */
- val childByKey: RDD[(String, Map[String, String])] = sc.redisHashes("Child:*")
+val childByKey: RDD[(String, Map[String, String])] = sc.redisHashes("Child:*")
 val childByParentKey = childByKey
   .map {
     case (childKey, child) => (child("parent_key"), child)
