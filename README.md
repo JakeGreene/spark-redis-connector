@@ -1,4 +1,6 @@
 # Spark Redis Connector
+
+[![Join the chat at https://gitter.im/JakeGreene/spark-redis-connector](https://badges.gitter.im/JakeGreene/spark-redis-connector.svg)](https://gitter.im/JakeGreene/spark-redis-connector?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This library intends to allow you to expose Redis collections as Spark RDDs and Dataframes.
 
 ### Example Usage
